@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, jsonify
 import requests
 
 app = Flask(__name__)
@@ -8,9 +8,9 @@ def check_website(url):
     try:
         response = requests.get(url)
         status_code = response.status_code
-        return render_template('result.html', status_code=status_code)
+        return jsonify({'status_code': status_code})
     except requests.exceptions.RequestException as e:
-        return f"Error: {e}"
+        return jsonify({'error': str(e)})
 
 if __name__ == '__main__':
     app.run()
