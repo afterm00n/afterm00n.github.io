@@ -4,15 +4,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>afterm00n.github.io</title>
-
-	<script>
-        async function checkStatus() {
-            const url = 'http://afterm00n.github.io/check_website/https://world.al'; // Replace <website_url> with the website you want to check
-            const response = await fetch(url);
-            const data = await response.json();
-            document.getElementById('status').innerText = `Status Code: ${data.status_code}`;
-        }
-    </script>
 </head>
 <body>
 	Featured Web Repos
@@ -23,10 +14,5 @@
 		<li><a href="#">afterm00n</a> — py.1 </li>
 		<li><a href="#">afterm00n</a> — s0cks5.py </li>
 	</ul>
-
-
-
-	 <button onclick="checkStatus()">Check Status</button>
-    <p id="status"></p>
 </body>
 </html>
