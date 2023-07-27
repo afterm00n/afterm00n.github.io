@@ -3,7 +3,7 @@ import requests
 
 app = Flask(__name__)
 
-@app.route('/check_website/<url>')
+@app.route('/check_website/https://world.al')
 def check_website(url):
     try:
         response = requests.get(url)
